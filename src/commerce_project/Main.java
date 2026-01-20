@@ -14,26 +14,12 @@ public class Main {
                 new Product("AirPods Pro", 350000, "노이즈 캔슬링 무선 이어폰", 20)
         );
 
-        Scanner sc=new Scanner(System.in);
-        int num;
+        CommerceSystem commercesystem = new CommerceSystem(products);
 
-            System.out.println("[ 실시간 커머스 플랫폼 - 전자제품 ]");
-            while (true) {
-                int i = 1;
-                for (Product product : products) {
-                    System.out.println(i + "." + product);
-                    i++;
-                }
-                System.out.println("0. 종료");
-                num=sc.nextInt();
-                if (num==0) {
-                    break;
-                }
-
-            }
-      sc.close();
-        System.out.println("프로그램 종료");
+        commercesystem.start();
         }
+
+
 
     }
 
