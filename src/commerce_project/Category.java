@@ -21,7 +21,7 @@ public class Category {
 
     public void setName(String name){this.name=name;};
 
-    // 게터 결국에는 상품들을 묶는 상위 개념의 이름이 필요
+    // 게터
     public List<Product> getProduct() {
         return products;
     }

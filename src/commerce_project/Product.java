@@ -17,14 +17,14 @@ public class Product {
         this.stock=stock;
     }
 
-//    public int getItem(){
-//
-//    }
-//
-//    public int setItem(){
-//
-//    }
+    // 장바구니 기능을 만들기 위해 게터로 정보를 얻는다.
+    public int getPrice() {
+        return price;
+    }
 
+    public int getStock() {
+        return stock;
+    }
 
     @Override
     public String toString() {
