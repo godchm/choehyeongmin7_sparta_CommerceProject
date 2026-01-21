@@ -1,12 +1,15 @@
 package commerce_project;
 
 public class Product {
+
+    // 속성
     private String name;
     private int price;
     private String description;
     private int stock;
 
 
+    // 생성자
     public Product(String name,int price, String description, int stock){
         this.name=name;
         this.price=price;
