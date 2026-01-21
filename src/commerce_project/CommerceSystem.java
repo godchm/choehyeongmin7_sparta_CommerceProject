@@ -24,6 +24,8 @@ public class CommerceSystem {
 
             System.out.println("[ 실시간 커머스 플랫폼 ]");
             int i = 1;
+
+            //categories 리스트에 들어 있는 Category 객체를 category라는 변수에 담아 반복
             for (Category category : categories) {
                 System.out.println(i + ". " + category.getName());
                 i++;
@@ -61,6 +63,7 @@ public class CommerceSystem {
 
         }
 
+        // 닫아줘야 한다.
         sc.close();
         System.out.println("커머스 프래그램을 종료합니다.");
 
