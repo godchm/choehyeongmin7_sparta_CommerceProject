@@ -29,7 +29,7 @@ public class Main {
         Category sunder=new Category("전자제품",sunderproducts);
         Category food=new Category("식품",foodproducts);
         Category clthoes=new Category("의류",clothesproducts);
-        List<Category> categories = List.of(sunder, food, clthoes);
+//        List<Category> categories = List.of(sunder, food, clthoes);
 //        CommerceSystem commercesystem = new CommerceSystem(products);
         CommerceSystem commercesystem = new CommerceSystem(List.of(sunder, food, clthoes));
 
