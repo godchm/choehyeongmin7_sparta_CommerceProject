@@ -44,12 +44,15 @@ public class CommerceSystem {
                     Category select = categories.get(num - 1);
                     List<Product> products=select.getProduct();
                     System.out.println("\n[ " + select.getName() + " 상품 목록 ]");
+                    int i1=1;
                     for (Product product : select.getProduct()) {
-                        System.out.println(" - " + product);
+                        System.out.println(i1+". "+product);
+                        i1++;
                     }
                     System.out.println("0. 뒤로가기");
                     System.out.print("입력 <- ");
                     num1 = sc.nextInt();
+
                     if (num1 == 0) {
                         System.out.println("뒤로가기.");
                         break;
@@ -58,6 +61,7 @@ public class CommerceSystem {
                     // 리스트에서 인덱스 정보 가져오기 get 사용 인덱스는 0부터 시작하므로 -1 설정.
                   Product product=products.get(num1-1);
                     System.out.println("선택한 상품: " + product);
+                    System.out.println(" ");
                     break;
                 }
 
