@@ -26,6 +26,15 @@ public class Product {
         return stock;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    // 게터 상품 정보
+    public String getDescription(){
+        return description;
+    }
+
     @Override
     public String toString() {
         return  " "+name +

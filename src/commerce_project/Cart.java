@@ -27,4 +27,10 @@ public class Cart {
         return product.getPrice() * Amount;
     }
 
+
+    // 총 재고
+    public int getTotalStock(){
+        return product.getStock()-Amount;
+    }
+
 }
