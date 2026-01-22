@@ -37,8 +37,18 @@ public class CommerceSystem {
         // 주문 확정 변수
         int num5;
 
-        //
+        // 총 금액 변수
         int totalprice=0;
+
+        // 관리자 모드 변수
+        int num6;
+
+        // 관리자 내의 변수
+        int num7;
+
+        // 관리자내 카테고리 변수
+        int num8;
+
 
         while (true) {
 
@@ -51,6 +61,7 @@ public class CommerceSystem {
                 i++;
             }
             System.out.println("0.   | 프로그램 종료");
+            System.out.println("6. 관리자 모드");
 
             if(!cartfinal.getCart().isEmpty()) {
                 System.out.println("[ 주문 관리 ]\n" +
@@ -92,11 +103,69 @@ public class CommerceSystem {
 
             System.out.print("컴머스 플랫폼 선택 <- ");
             num = sc.nextInt();
-
+            num6=num;
             if (num == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             }
+            Manger manger=new Manger(categories,cartfinal);
+            if(num6==6) {
+                System.out.println("관리자 비밀번호를 입력해주세요:");
+                sc.nextLine();
+                String inputpassword = sc.nextLine();
+                if (manger.mangerpassword(inputpassword)) {
+                    System.out.println("관리자 모드로 진입합니다.");
+                    System.out.println("[ 관리자 모드 ]\n" +
+                            "1. 상품 추가\n" +
+                            "2. 상품 수정\n" +
+                            "3. 상품 삭제\n" +
+                            "4. 전체 상품 현황\n" +
+                            "0. 메인으로 돌아가기");
+                    System.out.print("<-");
+                    num7=sc.nextInt();
+                    if(num7==0){
+                        break;
+                    }
+                    System.out.println("어느 카테고리에 상품을 추가하시겠습니까?");
+                    int j=1;
+                    for (Category category : categories) {
+                        System.out.println(j + ". " + category.getName());
+                        j++;
+                    }
+                    System.out.print("<-");
+                    num8=sc.nextInt();
+                    Category select1=categories.get(num8-1);
+                    System.out.println("["+select1.getName()+" 카테고리에 상품 추가 ]");
+                    System.out.print("상품명을 입력해주세요: ");
+                    sc.nextLine();
+                    String name = sc.nextLine();
+                    System.out.print("가격을 입력해주세요: ");
+                    int price = sc.nextInt();
+                    System.out.print("상품 설명을 입력해주세요: ");
+                    sc.nextLine();
+                    String description = sc.nextLine();
+                    System.out.print("재고수량을 입력해주세요: ");
+                    int stock = sc.nextInt();
+                    Product product=new Product(name,price,description,stock);
+                    select1.addProduct(product);
+
+                    System.out.println("[ 현재 " + select1.getName() + " 카테고리 상품 목록 ]");
+                    System.out.println(
+                            product.getName() + " | " +
+                                    product.getPrice() + " | " +
+                                    product.getDescription() + " | " +
+                                    product.getStock()
+                    );
+//                    System.out.println(product.getName()+""+ product.getPrice()+""+product.getDescription()+""+product.getStock());
+                    System.out.println("위 정보로 상품을 추가하시겠습니까?");
+
+                } else {
+                    System.out.println("관리자가 아니다.");
+                }
+
+                continue;
+            }
+
                 while (true) {
                     // 리스트에서 인덱스 정보 가져오기 get 사용 인덱스는 0부터 시작하므로 -1 설정
                     Category select = categories.get(num - 1);

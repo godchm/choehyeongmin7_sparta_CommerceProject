@@ -25,6 +25,10 @@ public class Category {
     public List<Product> getProduct() {
         return products;
     }
+
     public void  setProduct(List<Product> products){this.products=products;};
 
+    public void addProduct(Product product){
+        products.add(product);
+    }
 }
