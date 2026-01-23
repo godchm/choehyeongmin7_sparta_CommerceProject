@@ -52,6 +52,7 @@ public class CommerceSystem {
         // 관리자 내 추가 변수
         int num9;
 
+        // 가격 수정 변수
         int newprice;
         String newdesc;
         int newstock;
