@@ -96,7 +96,7 @@ public class CommerceSystem {
                     System.out.print("선택 <- ");
                     num5 = sc.nextInt();
                     if (num5 == 1) {
-                        System.out.println("주문이 완료되었습니다!   총 금액:" + totalprice);
+                        System.out.println("주문이 완료되었습니다!   총 금액:" + totalprice+"원 입니다.");
                         for (Cart cart : cartSelect) {
                             System.out.println(cart.getProduct().getName() + " 재고가 " + cart.getProduct().getStock() + "개 " + "(" + (cart.getProduct().getStock() - cart.getAmount()) + ")"
                                     + "개로 업데이트되었습니다.");
@@ -337,10 +337,6 @@ public class CommerceSystem {
                         System.out.println(product.getName() + "가 " + num3 + "개(수량) 장바구니에 추가되었습니다.");
                         cartfinal.CartData(product, num3);
                         break;
-                        // 총 가격
-//                            int price=cartfinal.getCart().get(0).getTotalPrice();
-//                            System.out.println(product.getName()+" "+(product.getStock()+num3)+price);
-
                     }
                 }
 

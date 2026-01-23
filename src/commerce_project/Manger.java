@@ -8,6 +8,7 @@ public class Manger{
     private static final String password = "admin123";
     private static final int maxpassword=3;
 
+    // 관리자 비밀번호 관리.. boolean으로 판단하자.
     public static boolean mangerpassword(Scanner sc) {
         int fail=0;
         while (fail < maxpassword) {
@@ -27,7 +28,5 @@ public class Manger{
 
 
     }
-
-
 
 }
