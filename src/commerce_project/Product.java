@@ -35,6 +35,20 @@ public class Product {
         return description;
     }
 
+//     세터 장바구니 내용들 수정하기 위해서
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+
     @Override
     public String toString() {
         return  " "+name +
