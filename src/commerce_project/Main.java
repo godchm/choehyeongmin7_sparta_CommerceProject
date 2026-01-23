@@ -22,7 +22,7 @@ public class Main {
         ));
         List<Product> clothesproducts=new ArrayList<>(List.of(
                 new Product("후드티", 120000, "따듯", 10),
-                new Product("패딩", 135000, "따듯", 20),
+                new Product("패딩", 135000, ":ㅈㅇ따듯", 20),
                 new Product("바지", 24000, "따듯", 15),
                 new Product("후리스", 150000, "따듯", 10)
         ));

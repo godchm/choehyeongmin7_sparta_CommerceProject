@@ -121,8 +121,6 @@ public class CommerceSystem {
 
             if (num6 == 6) {
                 sc.nextLine();
-//                System.out.println("관리자 비밀번호를 입력해주세요:");
-//                String inputpassword = sc.nextLine();
                 // 입력 넘겨주기
                 if (!Manger.mangerpassword(sc)) {
                     System.out.println("관리자가 아니다.");
